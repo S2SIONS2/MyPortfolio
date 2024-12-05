@@ -1,0 +1,52 @@
+.Snow {
+    width: 12px;
+    height: 12px;
+
+    background-color: #fff;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px white);
+
+    position: absolute;
+    
+    // 랜덤 범위 생성 함수
+    @function random_range($min, $max) {
+      $rand: random(); // 0과 1 사이의 랜덤 소수
+      $random_range: $min + math.floor($rand * (($max - $min) + 1));
+      @return $random_range;
+    }
+  
+    @for $i from 1 through 200 {
+      // 랜덤 속성 생성
+      $random-x: math.random(1000000) * 0.0001vw;
+      $random-y: math.random(1000000) * 0.00001vh;
+      $random-scale: math.random(10000) * 0.0001;
+      $random-offset: random_range(-100000, 100000) * 0.0001vw;
+      $random-x-end: $random-x + $random-offset;
+      $random-x-end-yoyo: $random-x + calc($random-offset / 2);
+      $random-yoyo-time: random_range(30000, 80000) / 100000;
+      $random-yoyo-y: $random-yoyo-time * 100vh;
+      $fall-duration: random_range(10, 30) * 1s;
+      $fall-delay: math.random(30) * -1s;
+  
+      // 눈송이 스타일
+      &:nth-child(#{$i}) {
+        
+        top: 0;
+        left: $random-y;
+        opacity: random(10000) * 0.0001;
+        transform: translate($random-x, -10px) scale($random-scale);
+        animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+      }
+  
+      // 애니메이션 정의
+      @keyframes fall-#{$i} {
+        #{math.percentage($random-yoyo-time)} {
+          transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
+        }
+        to {
+          transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
+        }
+      }
+    }
+  }
+  
