@@ -7,10 +7,11 @@ import Snow from './components/Snow';
 import Clock from './components/Clock';
 import Application from './components/Application';
 
+import Profile from './components/Profile';
+
 import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 
-function App() {
-  
+function App() {  
   return (
     <div className='App'>
       <div className='snowman'></div>
@@ -21,7 +22,7 @@ function App() {
       </div>
       {/*왼쪽 앱 영역*/}
       <div className='appWrap'>
-        <Application icon={faAddressCard} name={'이력서'}/>
+        <Application icon={faAddressCard} name={'이력서'} modalName={Profile}/>
       </div>
       {/*오른쪽 영역*/}
       <article className='calendarWrap p-0 m-0 g-0'>

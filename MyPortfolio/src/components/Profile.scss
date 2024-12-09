@@ -1,0 +1,114 @@
+.Profile {
+    width: 100%;
+    height: calc(100% - 35px);
+    overflow: auto;
+    position: relative;
+
+    background-color: #fff;
+
+    .btnWrap {
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #eeeeee;
+        padding: 5px;
+    }
+
+    section{
+        display: flex;
+        position: relative;
+
+        &:not(:first-child)::before{
+            content: "";
+            width: 95%;
+            border-bottom: 2px solid #434343;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .leftArea {
+            width: 20%;
+            min-width: 250px;
+            padding: 30px;
+            background-color: #eee;
+        }
+        .rightArea {
+            width: 80%;
+            padding: 30px;
+
+            p {
+                margin-bottom: 0.5rem;
+                color: #333;
+            }
+
+            li{
+                list-style: inside;
+            }
+            
+            details li {
+                list-style: disc;
+            }
+        }
+    }
+    .personalProfile{
+        img{
+            width: 100%;
+            margin: auto;
+            padding: 0;
+        }
+    }
+}
+
+@media print {
+    // html ,  body {
+    //     height :  100vh ;
+    //     margin :  0  !important ;
+    //     padding :  0  !important ;
+    //     overflow : hidden; 
+    //  } 
+
+    section{
+        display: flex;
+        position: relative;
+    }
+    section:not(:first-child)::before{
+        content: "";
+        width: 95%;
+        border-bottom: 2px solid #434343;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .leftArea {
+        width: 20%;
+        min-width: 250px;
+        padding: 30px;
+        background-color: #eee;
+    }
+    .rightArea {
+        width: 80%;
+        padding: 30px;
+
+        p {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        li{
+            list-style: inside;
+        }
+        
+        details li {
+            list-style: disc;
+        }
+    }
+    img{
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+}

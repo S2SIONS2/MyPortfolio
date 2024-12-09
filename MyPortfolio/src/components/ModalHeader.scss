@@ -1,0 +1,28 @@
+.ModalHeader {
+    width: 100%;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    // justify-content: flex-end;
+
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    background-color: #484158;
+
+    button{
+        background-color: #b29bb8;
+        border: none;
+        border-radius: 50%;
+
+        font-size: 10px;
+
+        width: 20px;
+        height: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

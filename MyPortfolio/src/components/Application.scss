@@ -22,4 +22,17 @@
         white-space: nowrap;
         color: #fff;
     }
+
+    /* modal custom */
+    .ModalWrap{
+        position: absolute;
+        top: 0;
+        // left: 50%;
+        // transform: translateX(-50%);
+        z-index: 999;
+
+        width: 80vw;
+        height: 90vh;
+        // overflow: visible;
+    }
 }
