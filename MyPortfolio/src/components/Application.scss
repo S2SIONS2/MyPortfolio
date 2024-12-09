@@ -1,0 +1,25 @@
+.Application {
+    .appIcon{
+        background-color: #484157;
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        cursor: pointer;
+        > *{
+            font-size: 1.5rem;
+            color: #fff;
+            z-index: 1;
+        }
+    }
+
+    .name{
+        white-space: nowrap;
+        color: #fff;
+    }
+}

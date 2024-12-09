@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Do+Hyeon&family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
+
+.Clock{
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #484157;
+
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    border-bottom: 5px solid #484157;
+}
