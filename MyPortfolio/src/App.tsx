@@ -8,8 +8,10 @@ import Clock from './components/Clock';
 import Application from './components/Application';
 
 import Profile from './components/Profile';
+import Projects from './components/Projects';
 
-import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard, faFolderOpen, faT } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
 
 function App() {  
   return (
@@ -22,7 +24,10 @@ function App() {
       </div>
       {/*왼쪽 앱 영역*/}
       <div className='appWrap'>
-        <Application icon={faAddressCard} name={'이력서'} modalName={Profile}/>
+        <Application iconImg={faAddressCard} name={'이력서'} modalName={Profile}/>
+        <Application iconImg={faFolderOpen} name={'프로젝트'} modalName={Projects} />
+        <Application iconImg={faT} name={'블로그'} url={'https://deer-develope-diary.tistory.com/'}/>
+        <Application iconImg={faGithub} name={'깃허브'} url={'https://github.com/S2SIONS2'}/>
       </div>
       {/*오른쪽 영역*/}
       <article className='calendarWrap p-0 m-0 g-0'>

@@ -1,4 +1,7 @@
-.Application {
+.Folder {
+    display: flex;
+    align-items: center;
+
     .appIcon{
         background-color: #484157;
         width: 45px;
@@ -13,14 +16,12 @@
         cursor: pointer;
         > *{
             font-size: 1.5rem;
-            color: #fff;
-            z-index: 1;
+            z-index: 2;
         }
     }
 
-    .name{
+    .folderName{
         white-space: nowrap;
-        color: #fff;
     }
 
     /* modal custom */

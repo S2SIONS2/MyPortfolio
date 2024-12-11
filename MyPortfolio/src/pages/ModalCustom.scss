@@ -1,0 +1,152 @@
+.PjModal {
+    width: calc(100% - 210px);
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: #fff;
+    overflow: auto;
+
+    font-size: 18px;
+
+    .titleWrap {
+        position: absolute;
+        top: 2rem;
+        width: auto;
+    }
+
+    .slideWrap {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.5s ease;
+        
+        width: 100%;
+        padding: 0;
+        
+        .slideImg {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            flex: 1;
+            list-style: none;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    > section {
+        box-sizing: border-box;
+        padding: 0 40px;
+        margin-bottom: 4rem;
+
+        h3 {
+            width: 100%;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #222;
+            margin-bottom: 1.5rem;
+        }
+
+        .list {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            li {
+                line-height: 2;
+            }
+        }
+    }
+
+    .info {
+        p {
+            padding-bottom: 5px;
+            border-bottom: 2px solid #666;
+        }
+    }
+    
+
+    .iconWrap{
+        list-style: none;
+        position: sticky;
+        top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 25px;
+        z-index: 1;
+
+        li {
+            width: 35px;
+            height: 35px;
+            background-color: #484158;
+            border-radius: 50%;
+
+            font-size: 20px;
+            color: #fff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+            
+            > *{
+                color: inherit;
+            }
+
+            &.web::after{
+                content: '웹 사이트 바로 가기';
+                position: absolute;
+                top: 110%;
+                left: 50%;
+                transform: translateX(-50%);
+
+                font-size: 10px;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+
+                white-space: nowrap;
+                padding: 2px 5px;
+                border-radius: 5px;
+                z-index: 9999;
+
+                display: none;
+
+            }
+            
+            &.gitHub::after{
+                content: '깃허브 바로 가기';
+                position: absolute;
+                top: 110%;
+                left: 50%;
+                transform: translateX(-50%);
+                
+                font-size: 10px;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                
+                white-space: nowrap;
+                padding: 2px 5px;
+                border-radius: 5px;
+                z-index: 9999;
+                
+                display: none;
+            }
+
+            &:hover.web::after,
+            &:hover.gitHub::after{
+                display: block;
+            }
+        }
+    }  
+}
