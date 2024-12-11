@@ -1,5 +1,5 @@
 import './Projects.scss';
-import { faFolder } from '@fortawesome/free-solid-svg-icons';
+import { faFolder, faFolderOpen } from '@fortawesome/free-solid-svg-icons';
 import Folder from './Folder';
 import DailyDiary from '../pages/DailyDiary';
 import BueaLine from '../pages/BueaLine';
@@ -8,7 +8,7 @@ import TagWords from '../pages/TagWords';
 import { useState } from 'react';
 
 const Projects: React.FC = () => {
-    const [selectedFolder, setSelectedFolder] = useState(0); 
+    const [selectedFolder, setSelectedFolder] = useState(0);
 
     const folders = [
         { iconImg: faFolder, name: 'DailyDiary', modalName: DailyDiary },
@@ -16,9 +16,9 @@ const Projects: React.FC = () => {
         { iconImg: faFolder, name: 'RandomCypher', modalName: RandomCypher },
         { iconImg: faFolder, name: 'TagWords', modalName: TagWords },
     ]
-
+    
     const handleFolderClick = (index: number) => {
-        setSelectedFolder(index); // 클릭한 폴더의 인덱스를 상태로 저장
+        setSelectedFolder(index);
     };
 
     return (
@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
                           key={index}
                           onClick={() => handleFolderClick(index)}
                           >
-                            <Folder iconImg={folder.iconImg} name={folder.name} modalName={folder.modalName} isFirst = {index === 0}/>
+                            <Folder iconImg={selectedFolder === index ? faFolderOpen : folder.iconImg} name={folder.name} modalName={folder.modalName} isFirst = {index === 0}/>
                         </li>
                     ))
                 }

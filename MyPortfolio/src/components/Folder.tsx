@@ -32,6 +32,7 @@ const Folder: React.FC<FolderProps> = ({ iconImg, name, modalName: ModalComponen
     <div className="Folder" onClick={handleClick}>
       <div className="appIcon">
         <FontAwesomeIcon icon={iconImg ? iconImg : faFolderOpen} />
+        {/* <FontAwesomeIcon icon={iconImg} /> */}
       </div>
       <p className="row align-items-center justify-content-center folderName p-0 m-0 ms-2">{name}</p>
 
