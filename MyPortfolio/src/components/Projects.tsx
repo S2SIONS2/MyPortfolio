@@ -5,14 +5,16 @@ import DailyDiary from '../pages/DailyDiary';
 import BueaLine from '../pages/BueaLine';
 import RandomCypher from '../pages/RandomCypher';
 import TagWords from '../pages/TagWords';
+import Record from '../pages/Record';
 import { useState } from 'react';
 
 const Projects: React.FC = () => {
     const [selectedFolder, setSelectedFolder] = useState(0);
 
     const folders = [
-        { iconImg: faFolder, name: 'DailyDiary', modalName: DailyDiary },
+        { iconImg: faFolder, name: 'Record', modalName: Record },
         { iconImg: faFolder, name: 'BueaLine', modalName: BueaLine },
+        { iconImg: faFolder, name: 'DailyDiary', modalName: DailyDiary },
         { iconImg: faFolder, name: 'RandomCypher', modalName: RandomCypher },
         { iconImg: faFolder, name: 'TagWords', modalName: TagWords },
     ]

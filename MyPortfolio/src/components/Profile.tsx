@@ -40,7 +40,7 @@ const Profile: React.FC = () => {
                         </p>
                         <p className='row'>
                             <span className='fw-bold w-auto'>주소:</span>
-                            경기도 안산시 상록구
+                            경기도 안산시 상록구 일동
                         </p>
                         <p className='row'>
                             <span className='fw-bold w-auto'>전화번호:</span>
@@ -183,7 +183,10 @@ const Profile: React.FC = () => {
                             <summary> Next </summary>
                             <ul>
                                 <li>Page Router에 대한 기본적인 이해가 있습니다.</li>
-                                <li>App Router를 통한 프로젝트를 진행중입니다.</li>
+                                <li>App Router를 통한 프로젝트를 개발 경험이 있습니다.</li>
+                                <li>Dynamic 동적 페이지 개발 경험이 있습니다.</li>
+                                <li>Supabase를 이용한 API 통신 경험이 있습니다.</li>
+                                <li>Zustand를 활용한 상태 관리 경험이 있습니다.</li>
                             </ul>
                         </details>
                         <details open>
@@ -218,6 +221,7 @@ const Profile: React.FC = () => {
                             </div>
                             <div>
                                 새로운 기술에 대한 열정과 끊임없는 도전으로 더 나은 사용자 경험을 제공하기 위해 노력하고 싶습니다. 
+                                지난 약 1년간 React와 Typescript 및 Next에 대한 공부를 꾸준히 하고 있습니다.
                                 협업을 통해 팀원들과의 원활한 의사소통으로 함께 프로젝트를 성공적으로 이끌어내는데 기여하고 싶습니다. 
                                 다양한 프로젝트 경험을 통해 문제해결 능력과 아이디어를 발휘하여 근무해왔습니다. 
                                 책임감을 가지고 일에 임하며, 항상 성장을 추구하고 있습니다.
@@ -225,6 +229,12 @@ const Profile: React.FC = () => {
                         </details>
                         <details className='mb-2'>
                             <summary> 끊임없는 도전을 통해 성장하는 내 안의 힘 </summary>
+                            <div>
+                                처음 제 전공이었던 영양사를 그만두고 개발자의 길을 선택할 때 주변의 우려가 많았습니다.
+                                하지만 불도저 같은 추진력으로 제가 원하는 길을 찾기 위해 새로운 도전을 결심했습니다.
+                                그 결과, 웹 퍼블리셔로서의 경험을 쌓으면서 프론트엔드 개발자로의 꿈을 키우게 되었습니다.
+                                이러한 경험을 통해 끊임없는 도전을 통해 성장하는 것이 얼마나 중요한지 깨달았습니다.
+                            </div>
                             <div>
                                 새로운 것을 좋아하며 안주하지 않고 도전하는 것을 즐기는 저는, 프론트엔드 개발자로서의 역량을 키우기 위해 끊임없이 노력하고 싶습니다. 
                                 항상 호기심 가득한 마음으로 다양한 기술을 습득하며 성장하는 것을 즐기고, 
