@@ -1,0 +1,26 @@
+.Aboutme {
+    overflow: auto;
+    
+    padding: 2rem;
+    box-sizing: border-box;
+
+    line-height: 1.8;
+    
+    section {
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 10rem;
+        }
+        &:nth-child(1) {    
+            margin-bottom: 4rem;
+        }
+        &.plus_section {
+            background-color: #f3e5f4;
+
+            padding: 10px;
+            box-sizing: border-box;
+
+            border-radius: 10px;
+        }
+    }
+}

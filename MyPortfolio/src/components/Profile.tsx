@@ -16,14 +16,14 @@ const Profile: React.FC = () => {
     // });
 
     return (
-        <div className="Profile">
+        <div className="Profile">                            
             <div className='btnWrap'>
                 <button className='printBtn' type='button' onClick={() => reactToPrintFn?.()}>
                     <FontAwesomeIcon icon={faPrint} />
                 </button>
             </div>
             <div ref={contentRef}>
-                <section className='personalProfile'>
+                <section className='personalProfile'>   
                     <div className='leftArea'>
                         <img src={profileImg} alt='profile image'/>
                     </div>
@@ -103,7 +103,7 @@ const Profile: React.FC = () => {
                             </ul>
                         </details>
                         <details>
-                            <summary>[LG Praicam Cloud] - 백엔드 2명, 퍼블리셔 1명</summary>
+                            <summary>[LG Praicam] - 백엔드 2명, 퍼블리셔 1명</summary>
                             <ul>
                                 <li>HTML, CSS, J-Query를 이용한 화면 퍼블리싱</li>
                                 <li>최신 CSS 문법을 사용하여 스크립트 최소화</li>
@@ -112,7 +112,7 @@ const Profile: React.FC = () => {
                             </ul>
                         </details>
                         <details>
-                            <summary>[LG Praicam Cloud] - 백엔드 2명, 퍼블리셔 1명</summary>
+                            <summary>[LG 양극재] - 백엔드 2명, 퍼블리셔 1명</summary>
                             <ul>
                                 <li>HTML, CSS, J-Query를 이용한 화면 퍼블리싱</li>
                                 <li>최신 CSS 문법을 사용하여 스크립트 최소화</li>
@@ -142,6 +142,7 @@ const Profile: React.FC = () => {
                         <h4>핵심 역량</h4>
                     </div>
                     <div className='rightArea'>
+                        <h3 className='sub_title'>Language</h3>
                         <details open>
                             <summary> HTML5 / CSS3 </summary>
                             <ul>
@@ -167,6 +168,7 @@ const Profile: React.FC = () => {
                                 <li>React, Next 환경에서 Typescript로 코드를 작성할 수 있습니다.</li>
                             </ul>
                         </details>
+                        <h3 className='sub_title'>FrameWork & Library</h3>
                         <details open>
                             <summary> React </summary>
                             <ul>
@@ -189,6 +191,24 @@ const Profile: React.FC = () => {
                                 <li>Zustand를 활용한 상태 관리 경험이 있습니다.</li>
                             </ul>
                         </details>
+                        <details open>
+                            <summary>SUPABASE</summary>
+                            <ul>
+                                <li>테이블 설계 및 API를 연결하여 사용합니다.</li>
+                                <li>Real-time 기능을 통해 테이블의 실시간 변화에 즉각적으로 대응합니다.</li>
+                                <li>인증 기능을 사용하여 로그인을 구현합니다.</li>
+                            </ul>
+                        </details>
+                        <details open>
+                            <summary>GSAP</summary>
+                            <ul>   
+                                <li>인터렉티브한 웹을 구현하기 위해 사용합니다.</li>
+                                <li>이미지 페이드 인 / 아웃 경험이 있습니다.</li>
+                                <li>다양한 텍스트 표현 방식을 구사합니다.</li>
+                                <li>반응형 슬라이드를 구현합니다.</li>
+                            </ul>
+                        </details>
+                        <h3 className='sub_title'>ETC</h3>
                         <details open>
                             <summary> Figma </summary>
                             <ul>
