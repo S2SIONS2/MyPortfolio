@@ -1,0 +1,61 @@
+.Bubble {
+    width: 100px;
+    height: 100px;
+
+    background-color: #9b9cc0;
+    border-radius: 50%;
+    filter: blur(3px) brightness(1.5);
+    position: absolute;
+
+    @function random_range($min, $max) {
+        $rand: math.random();
+        $random_range: $min + math.floor($rand * (($max - $min) + 1));
+        @return $random_range;
+    }
+
+    @for $i from 1 through 50 {
+        $random-x: math.random(1000000) * 0.0001vw;
+        $random-scale: math.random(10000) * 0.0001 + 0.5;
+        $random-offset: random_range(-100000, 100000) * 0.0001vw;
+        $random-x-end: $random-x + $random-offset;
+        $up-duration: random_range(10, 30) * 1s;
+        $up-delay: math.random(30) * -1s;
+        $surface-position: 50vh; // 물 수면 위치
+
+        &:nth-child(#{$i}) {
+            bottom: -10vh; // 수면 아래에서 시작
+            left: $random-x;
+            opacity: math.random(10000) * 0.0005 + 0.5;
+            transform: translateY(100vh) scale($random-scale);
+
+            animation: 
+                rise-up-#{$i} $up-duration $up-delay cubic-bezier(0.22, 0.61, 0.36, 1) infinite,
+                ripple-#{$i} $up-duration $up-delay linear infinite;
+        }
+
+        // 물방울이 물 수면을 뚫고 올라오는 애니메이션
+        @keyframes rise-up-#{$i} {
+            0% {
+                transform: translateY(100vh) scale($random-scale);
+            }
+            50% {
+                transform: translateY($surface-position) scale($random-scale * 1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale($random-scale);
+                opacity: 0.5;
+            }
+        }
+
+        // 물방울이 수면을 통과할 때 물결 효과 (Ripple)
+        @keyframes ripple-#{$i} {
+            50% {
+                box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0);
+            }
+        }
+    }
+}

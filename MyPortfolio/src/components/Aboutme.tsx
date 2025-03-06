@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Aboutme = () => {
+const Aboutme: React.FC = () => {
     const titleRef1 = useRef<HTMLHeadingElement>(null)
     const titleRef2 = useRef<HTMLHeadingElement>(null)
 
@@ -49,7 +49,7 @@ const Aboutme = () => {
     useLayoutEffect(() => {
         // 각 제목에 대해 고유한 ID를 사용
         createTextAnimation(titleRef1.current, 'title1');
-        createTextAnimation(titleRef2.current, 'title2');
+        // createTextAnimation(titleRef2.current, 'title2');
         
         // 컴포넌트 언마운트 시 ScrollTrigger 제거
         return () => {

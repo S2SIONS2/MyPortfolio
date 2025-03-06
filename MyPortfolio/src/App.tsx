@@ -13,10 +13,12 @@ import Projects from './components/Projects';
 import { faAddressCard, faFolderOpen, faT, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
 import Aboutme from './components/Aboutme';
+// import BubbleAnimation from './pages/BubbleAnimation';
 
 function App() {  
   return (
     <div className='App'>
+      {/* <BubbleAnimation /> */}
       <div className='snowman'></div>
       <div className='snowWrap'>
         {[...Array(220)].map((_, index) => (

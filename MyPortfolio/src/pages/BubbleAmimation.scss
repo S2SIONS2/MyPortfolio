@@ -1,0 +1,78 @@
+.BubbleAnimation {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #545578;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 999;
+
+    transition: 3s ease-in-out;
+    animation: changeBg 3s linear;
+
+    @keyframes changeBg {
+        0% {
+            background-color: #545578;
+        }
+        100% {
+            background-color: #fff29c;
+        }
+    }
+
+    &.done {
+        display: none;
+    }
+
+    // 가운데 표면이 점점 커지게
+    .WaterSurface {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        border-radius: 30%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: 10;
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+
+        animation: bigger 3s linear ;
+    }
+
+    @keyframes bigger {
+        0% {
+            width: 100%;
+            height: 5px;
+            border-radius: 30%;
+        }
+        100% {
+            width: 100%;
+            height: 100%;
+            border-radius: 60%;
+        }
+    }
+
+    // 물결 배경 애니메이션
+    .BackgroundWave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background: radial-gradient(circle, #9b9cc0 10%, transparent 50%);
+        animation: moveBackground 3s linear infinite;
+        opacity: 0.5;
+    }
+
+    @keyframes moveBackground {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
